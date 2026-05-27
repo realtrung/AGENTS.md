@@ -83,7 +83,7 @@ Purpose:
 - keep the current state obvious
 - help determine the next task
 
-Add one entry for each completed task-sized unit of work, ordered newest first.
+Add one entry for each completed unit of work, ordered newest first.
 
 Write each entry as a direct, concise outcome, not the mechanical change.
 
@@ -205,8 +205,7 @@ Commit format:
 ```md
 # I1 Foundation Changelog
 
-## I1-S2-03 — 2026-03-25
-Unauthenticated users are redirected to sign-in before accessing the workspace.
+- I1-S2-03 (2026-03-25): Unauthenticated users are redirected to sign-in before accessing the workspace.
 ```
 
 ### Task Proposal
