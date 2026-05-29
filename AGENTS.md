@@ -136,8 +136,8 @@ For implementation work, you must follow the RGR cycle to clarify your intent an
    - Action: Modify source files. Verify pass. Commit.
 3. REFACTOR
    - Goal: Improve code structure, readability, or performance without changing behavior.
-   - Action: Modify source and/or test files. Verify pass. Do not commit.
-   - Approval: Wait for user acceptance test result.
+   - Action: Modify source and/or test files. Verify pass. Do not commit yet.
+   - Approval: Wait for the user acceptance test result before committing.
 
 ### Principles of Engagement
 
@@ -185,14 +185,24 @@ Allowed statuses for iterations and slices:
 
 Remove temporary documents, including the task proposal and the UAT checklist, before committing.
 
-Use the Work ID as the scope in the commit message for implementation tasks.
+Commit format: `<type>(<scope>): <message>`.
 
-Commit format:
+### Type
 
-- Red Phase: `test(I1-S2-03): failing test for auth redirect`
-- Green Phase: `feat(I1-S2-03): enforce auth redirect`
-- Refactor Phase: `refactor(I1-S2-03): clean up redirect logic`
-- Other: `chore: update CI config`, `docs: add auth module README`
+- Implementation tasks: use the type matching the RGR phase — `test` (Red), `feat` (Green), `refactor` (Refactor).
+- Non-task: use a conventional type — `chore`, `docs`, `build`, etc.
+
+### Scope
+
+- Single repo: use `<WorkID>` for implementation tasks; omit the scope for non-task.
+- Monorepo: always scoped to the workspace name, or `repo` for repo-wide changes. Append `/<WorkID>` for implementation tasks.
+
+### Examples
+
+- Single repo task: `test(I1-S2-03): failing test for auth redirect`
+- Monorepo task: `feat(web/I1-S2-03): enforce auth redirect`
+- Single repo chore: `chore: bump CI runner version`
+- Monorepo chore: `chore(repo): bump turbo to 2.0`
 
 ## Document Templates
 
