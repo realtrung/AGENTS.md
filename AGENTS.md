@@ -1,7 +1,9 @@
 # Workflow
+
 An iteration-based workflow designed to keep planning light, execution focused, and documentation useful.
 
 ## Core Operating Rules
+
 1. Project hierarchy: iteration → slice → task.
 2. Every iteration delivers the finest production-grade quality; avoid "MVP", "POC", or "prototype" mindsets.
 3. Plan at the iteration level, not at the task-list level.
@@ -15,6 +17,7 @@ An iteration-based workflow designed to keep planning light, execution focused, 
 11. Follow the Red-Green-Refactor (RGR) cycle for implementation work.
 
 ## Communication Style
+
 - Keep your answers short and concise.
 - Put the punchline in the first sentence.
 - No fluff or cheerful filler text; technical prose only.
@@ -27,6 +30,7 @@ An iteration-based workflow designed to keep planning light, execution focused, 
 - Use explicit confidence levels for assessments.
 
 ## Project Documentation Structure
+
 The active workspace must have `.building/` and the required iteration documents before implementation work begins.
 
 ```text
@@ -43,18 +47,23 @@ The active workspace must have `.building/` and the required iteration documents
 ```
 
 ### `.building/product.md`
+
 Defines product context, goals, and business intent.
 
 ### `.building/design.md`
+
 Defines guidelines for UI (e.g., layout, typography, and colors) or technical design (e.g., backend module architecture, API design patterns).
 
 ### `.building/iterations.md`
+
 Tracks iteration status across the project.
 
 ### `.building/<iteration>/spec.md`
+
 Defines what the iteration must achieve.
 
 Must include:
+
 - objective
 - user or business outcome
 - constraints
@@ -64,9 +73,11 @@ Must include:
 This is the source of truth for iteration scope.
 
 ### `.building/<iteration>/plan.md`
+
 Defines the implementation approach for the iteration.
 
 Must include:
+
 - overview
 - iteration decisions
 - slice status list
@@ -76,9 +87,11 @@ Must include:
 Do not predefine implementation tasks for slices.
 
 ### `.building/<iteration>/changelog.md`
+
 A record of execution for the iteration.
 
 Purpose:
+
 - preserve meaningful implementation history
 - keep the current state obvious
 - help determine the next task
@@ -88,6 +101,7 @@ Add one entry for each completed unit of work, ordered newest first.
 Write each entry as a direct, concise outcome, not the mechanical change.
 
 ## Monorepo Scope
+
 Each app or package owns its own `.building/` folder for execution work.
 
 1. Always read root `.building/product.md` and `.building/design.md` for global context.
@@ -95,6 +109,7 @@ Each app or package owns its own `.building/` folder for execution work.
 3. If no app/package is clear, explicitly ask which workspace to use.
 
 ## Execution Flow
+
 When executing work, always follow this sequence:
 
 1. Identify the active iteration.
@@ -108,9 +123,11 @@ When executing work, always follow this sequence:
 9. Update the changelog and iteration/slice statuses to reflect current progress.
 
 ## Agentic TDD Protocol
+
 For implementation work, you must follow the RGR cycle to clarify your intent and deliver finest code quality—they are your success metrics.
 
 ### The RGR Cycle
+
 1. RED
    - Goal: Write one or more failing tests that define the desired behavior.
    - Action: Modify test files. Verify fail. Commit.
@@ -123,6 +140,7 @@ For implementation work, you must follow the RGR cycle to clarify your intent an
    - Approval: Wait for user acceptance test result.
 
 ### Principles of Engagement
+
 - Write failing tests before writing any feature code for a given scope.
 - Execute tests at every phase change to physically verify failure or success.
 - Include specific test results and error messages in your thought process.
@@ -130,20 +148,24 @@ For implementation work, you must follow the RGR cycle to clarify your intent an
 - Keep commits granular to represent single steps in the RGR cycle.
 
 ## Task Proposal
+
 When asked `What next?`, propose one implementation task that moves the active slice toward its exit criteria.
 
 Write task proposals in plain English. Use concise, direct sentences that are easy to skim.
 
 Task documentation:
+
 - Save the task plan to a file under `docs/` for review.
 - After completing the task, create a short, skimmable UAT checklist.
 
 ## Double-Check
+
 When prompted with `Double-check!`, review the work from the current session for completeness.
 
 For a task proposal, review the plan with fresh eyes and identify anything that should be clarified or decided before implementation begins.
 
 ## Status Values
+
 Allowed statuses for iterations and slices:
 
 - `[ ]` todo
@@ -153,17 +175,20 @@ Allowed statuses for iterations and slices:
 - `[-]` cancelled
 
 ## ID Formats
+
 - Iteration: `I1`, `I2`, `I3`
 - Slice: `S1`, `S2`, `S3`
 - Task: `01`, `02`, `03`
 - Work ID: `I1-S1-01`, `I1-S1-02`
 
 ## Commit Rule
+
 Remove temporary documents, including the task proposal and the UAT checklist, before committing.
 
 Use the Work ID as the scope in the commit message for implementation tasks.
 
 Commit format:
+
 - Red Phase: `test(I1-S2-03): failing test for auth redirect`
 - Green Phase: `feat(I1-S2-03): enforce auth redirect`
 - Refactor Phase: `refactor(I1-S2-03): clean up redirect logic`
@@ -172,14 +197,17 @@ Commit format:
 ## Document Templates
 
 ### `.building/iterations.md`
+
 ```md
 # Iteration Status
+
 - [.] [I1 Foundation](i1-foundation/plan.md)
 - [ ] [I2 Core Features](i2-core-features/plan.md)
 - [ ] [I3 Advanced Tools](i3-advanced-tools/plan.md)
 ```
 
 ### `.building/<iteration>/plan.md`
+
 ```md
 # I1 Foundation Plan
 
@@ -188,20 +216,28 @@ Commit format:
 ## Iteration Decisions
 
 ## Slice Status
+
 - [x] [S1 Repository Foundation](#s1-repository-foundation)
 - [.] [S2 Auth and Workspace Shell](#s2-auth-and-workspace-shell)
 - [ ] [S3 Core CRUD](#s3-core-crud)
 
 ## S1 Repository Foundation
+
 ### Goal
+
 ### Scope
+
 ### Non-goals
+
 ### Dependencies
+
 ### Exit Criteria
+
 ### Slice Decisions
 ```
 
 ### `.building/<iteration>/changelog.md`
+
 ```md
 # I1 Foundation Changelog
 
@@ -209,11 +245,17 @@ Commit format:
 ```
 
 ### Task Proposal
+
 ```md
 # Title
+
 ## Goal
+
 ## Scope
+
 ## Done when
+
 ## Decisions
+
 ## Approach
 ```
