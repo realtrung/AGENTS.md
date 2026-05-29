@@ -29,4 +29,4 @@ Read the full workflow: [AGENTS.md](AGENTS.md)
 
 ## License
 
-[MIT](LICENSE)
+[CC0 1.0](LICENSE)
