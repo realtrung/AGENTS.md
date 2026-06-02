@@ -2,6 +2,12 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 2.1.0 (2026-06-02)
+
+- Renamed "Task Proposal" to "Task Plan" to emphasize planning over proposing.
+- Added sizing rule: tasks must target meaningful units of behavior, not individual functions.
+- Tightened task plan requirements prose.
+
 ## 2.0.1 (2026-06-02)
 
 - Specified explicit filenames for task proposal artifacts (`task-plan.md`, `task-uat.md`) replacing the vague "file under `docs/`".

@@ -84,14 +84,14 @@ For implementation work, you must follow the RGR cycle to clarify your intent an
 - Flawed tests can be corrected during the GREEN phase. Document the reasoning in the commit.
 - Keep commits granular to represent single steps in the RGR cycle.
 
-## Task Proposal
+## Task Plan
 
-When asked `What next?`, propose one implementation task that moves the active slice toward its exit criteria.
+When asked `What next?`, plan one implementation task to move the active slice toward its exit criteria.
 
 Requirements:
 
-- Write task proposals in plain English.
-- Save the task plan to `task-plan.md` for review.
+- Size the task around meaningful units of behavior, not individual functions.
+- Write the task plan in plain English; save it to `task-plan.md` for review.
 - After completing the task, create a short, skimmable `task-uat.md` UAT checklist.
 - Remove both `task-plan.md` and `task-uat.md` before committing.
 
@@ -173,7 +173,7 @@ Commit format: `<type>(<scope>): <message>`.
 ## S1 Repository Foundation
 ```
 
-### Task Proposal
+### Task Plan
 
 ```md
 # Title
