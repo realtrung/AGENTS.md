@@ -103,6 +103,12 @@ function validate(filePath) {
 			continue
 		}
 
+		// --- Status/task-list items like "- [ ]", "- [.]", "- [x]" ---
+		if (/^\s*- \[/.test(line)) {
+			prevLineWasProse = false
+			continue
+		}
+
 		// RULE: Width — max 90 characters
 		if (line.length > 90) {
 			violations.push({
