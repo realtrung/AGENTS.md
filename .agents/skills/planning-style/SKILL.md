@@ -1,7 +1,7 @@
 ---
 name: planning-style
 description: Writing style for all planning documents in this repository. Read before
-  writing or editing any planning artifact — plan.md, task proposals, UAT checklists.
+  writing or editing any planning artifact — plan.md, task-plan.md, task-uat.md.
   Not required for non-planning prose.
 ---
 
