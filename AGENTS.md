@@ -91,8 +91,9 @@ When asked `What next?`, propose one implementation task that moves the active s
 Requirements:
 
 - Write task proposals in plain English.
-- Save the task plan to a file under `docs/` for review.
-- After completing the task, create a short, skimmable UAT checklist.
+- Save the task plan to `task-plan.md` for review.
+- After completing the task, create a short, skimmable `task-uat.md` UAT checklist.
+- Remove both `task-plan.md` and `task-uat.md` before committing.
 
 ## Status Values
 
@@ -110,8 +111,6 @@ Allowed statuses for iterations and slices:
 - Work ID: `I1-S1-01`, `I1-S1-02`
 
 ## Commit Rule
-
-Remove temporary documents, including the task proposal and the UAT checklist, before committing.
 
 Commit format: `<type>(<scope>): <message>`.
 

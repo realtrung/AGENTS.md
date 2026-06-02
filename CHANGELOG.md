@@ -2,6 +2,11 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 2.0.1 (2026-06-02)
+
+- Specified explicit filenames for task proposal artifacts (`task-plan.md`, `task-uat.md`) replacing the vague "file under `docs/`".
+- Moved the temporary-document removal rule from Commit Rule into the Task Proposal requirements section for better cohesion.
+
 ## 2.0.0 (2026-06-02)
 
 ### Removed
