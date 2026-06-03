@@ -2,6 +2,11 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 2.2.0 (2026-06-03)
+
+- Added explicit rule: plan goals state intent only; decisions and implementation details belong in `task-plan.md`.
+- Tightened `plan.md` description in the `.building/` structure diagram (removed "definitions").
+
 ## 2.1.1 (2026-06-03)
 
 - Changed "If they're wrong" to "If the user is wrong" in Communication Style for unambiguous referent.

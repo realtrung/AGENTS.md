@@ -33,7 +33,7 @@ The active workspace must have `.building/` and the required iteration documents
   product.md          # Product context
   iterations.md       # Iteration status tracker
   i1-foundation/
-    plan.md           # Iteration goals and slice definitions — no predefined tasks
+    plan.md           # Iteration and slice goals — no predefined tasks
     changelog.md      # Execution record: one entry per completed unit, newest first, written as outcomes — not mechanical changes
   i2-core-feature/
   i3-extension/
@@ -160,6 +160,8 @@ Commit format: `<type>(<scope>): <message>`.
 
 ## S2 Goal
 ```
+
+Rule: Goal states intent only; decisions and implementation details belong in `task-plan.md`.
 
 ### `.building/<iteration>/changelog.md`
 
