@@ -2,6 +2,10 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 2.2.1 (2026-06-03)
+
+- Added Core Operating Rule 10: never treat a user proposal as settled; always determine the right approach independently.
+
 ## 2.2.0 (2026-06-03)
 
 - Added explicit rule: plan goals state intent only; decisions and implementation details belong in `task-plan.md`.

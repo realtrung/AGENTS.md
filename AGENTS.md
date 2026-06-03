@@ -14,6 +14,7 @@ This is an iteration-based workflow designed to keep planning light, execution f
 8. Follow the Red-Green-Refactor (RGR) cycle for implementation work.
 9. Every single iteration/slice/task delivers the finest production-grade quality;
    avoid "MVP", "POC", or "prototype" mindsets.
+10. Never treat a user proposal as settled; always determine the right approach independently.
 
 ## Communication Style
 
