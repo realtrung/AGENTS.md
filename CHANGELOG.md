@@ -2,6 +2,10 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 2.1.1 (2026-06-03)
+
+- Changed "If they're wrong" to "If the user is wrong" in Communication Style for unambiguous referent.
+
 ## 2.1.0 (2026-06-02)
 
 - Renamed "Task Proposal" to "Task Plan" to emphasize planning over proposing.

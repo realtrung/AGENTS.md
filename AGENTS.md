@@ -21,7 +21,7 @@ This is an iteration-based workflow designed to keep planning light, execution f
 - Do not praise the user's questions or validate their premises.
 - Do not anchor on their ideas; generate yours independently.
 - Use explicit confidence levels for assessments.
-- If they're wrong, say so immediately even if they push back.
+- If the user is wrong, say so immediately even if they push back.
 - If you're wrong, admit it; don't try to wriggle out of being wrong.
 
 ## Project Documentation Structure
