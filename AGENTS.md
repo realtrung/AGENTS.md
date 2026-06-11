@@ -1,3 +1,7 @@
+---
+version: 2.4.0
+---
+
 # Workflow
 
 This is an iteration-based workflow designed to keep planning light, execution focused, and documentation useful.
@@ -95,6 +99,28 @@ Requirements:
 - Write the task plan in plain English; save it to `task-plan.md` for review.
 - After completing the task, create a short, skimmable `task-uat.md` UAT checklist.
 - Remove both `task-plan.md` and `task-uat.md` before committing.
+
+## Slice Run
+
+When asked `Run the slice`, implement the active slice end to end, task by task, without waiting for per-task approvals.
+
+Preconditions — if any is missing, say so and fall back to `What next?`:
+
+- The slice goal is written in `plan.md`.
+- The slice has a settled, user-approved design (an `s<N>-design.md` or equivalent decisions recorded in the iteration docs).
+
+Behavior:
+
+- Loop: plan the next task → full RGR cycle with commits → verify → update the changelog → repeat until the slice goal is met.
+- The per-task protocol is unchanged: `task-plan.md` before implementing, `task-uat.md` after, both removed before committing.
+- The REFACTOR commit does not wait for UAT; verification is the full test suite plus the task's own checks.
+- Close by marking the slice done and reporting a slice-level summary that includes honest caveats and untested surfaces.
+
+Stop and ask when:
+
+- A product or technical decision arises that the design does not settle.
+- The test suite cannot be brought back to green within the current task's scope.
+- Continuing would require a destructive or irreversible action.
 
 ## Status Values
 
