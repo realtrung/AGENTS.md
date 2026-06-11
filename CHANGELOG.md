@@ -2,7 +2,7 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
-## 2.2.1 (2026-06-03)
+## 2.3.0 (2026-06-03)
 
 - Added Core Operating Rule 10: never treat a user proposal as settled; always determine the right approach independently.
 
