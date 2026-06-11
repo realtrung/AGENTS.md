@@ -4,10 +4,11 @@ A disciplined workflow for AI coding agents — iteration-based planning, test-d
 
 ## What it does
 
-Four constraints that keep agents focused:
+Five constraints that keep agents focused:
 
 - **Iteration → Slice → Task hierarchy** — execute one task at a time.
 - **Task proposal loop** — propose the next task, wait for confirmation, implement, then verify with a UAT checklist.
+- **Slice run mode** — execute an entire slice end-to-end without per-task approvals when the slice has a settled design.
 - **Test-Driven Development** — follow the Red-Green-Refactor cycle with separate commits for each phase.
 - **`.building/` docs** — product context, iteration plans, status tracking, and changelogs.
 
