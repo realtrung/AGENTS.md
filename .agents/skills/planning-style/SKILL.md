@@ -1,5 +1,5 @@
 ---
-version: 1.0.0
+version: 1.1.0
 name: planning-style
 description: Writing style for all planning documents in this repository. Read before
   writing or editing any planning artifact.
@@ -59,3 +59,19 @@ Budget:
 - Third-party API costs tracked per environment.
 - All spend reviewed monthly.
 ```
+
+4. When revising a planning document:
+
+Replace old decisions entirely instead of layering new ones on top;
+the reader should see only the current state.
+
+```example
+Before (wrong):
+- Database: PostgreSQL 15, but after review we switched to MySQL 8.
+
+After (right):
+- Database: MySQL 8.
+```
+
+Retaining outdated reasoning alongside new decisions creates confusion,
+inflates document size, and breeds the bias of anchoring on previous ideas.
