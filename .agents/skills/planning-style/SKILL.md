@@ -1,55 +1,61 @@
 ---
+version: 1.0.0
 name: planning-style
 description: Writing style for all planning documents in this repository. Read before
-  writing or editing any planning artifact — plan.md, task-plan.md, task-uat.md.
-  Not required for non-planning prose.
+  writing or editing any planning artifact.
 ---
 
 # Planning Artifact Writing Style
 
-## Rules
+## Core Rules
 
-- Label: every line starts with a label
-- Scannable: one idea per line — every item is scannable without surrounding context
-- Format: labeled bullets only; prose paragraphs are not permitted
-- Detail: name the choice and its rationale; omit implementation specifics
-- Width: max 90 characters per line (including spaces)
-- Length: one sentence per line; never chain two sentences
+- Write plainly: use simple, direct language — avoid jargon and technical
+  density that obscures the intent.
+- Be skimmable: structure planning docs so a reader can quickly skim through
+  goals, scope, decisions, risks, etc — avoid wall of text.
+- Prefer labeled bullets: use `Label: detail` to make items quick to scan.
 
-## Two bullet structures
+## Best Practices
 
-Labeled: use when each item is self-contained.
-
-```example
-- Deduplication: URL-first, then checksum
-- Failure: automatic retry up to `MAX_RETRIES`
-```
-
-Unlabeled: for items that share a common theme.
+1. Use labeled bullets when the item is long:
 
 ```example
-To-do:
-- establish the data model
-- wire the first API endpoint
+- Deployment: the service runs in a single region; multi-region is out of scope.
+- Data retention: logs are kept for 30 days, then deleted automatically.
+- Auth: all endpoints require a valid session; no anonymous access.
 ```
 
-Quick rules:
-
-- children are unlabeled when the header provides full context
-- children are labeled when each needs its own identifier
-
-## Context parentheticals
-
-Usage: `(...)` for a qualifying note — it constrains the same idea, not a new one.
+2. Plain bullets work best for short items under a lead-in label:
 
 ```example
-- Provider: free-text column (no lookup table)
-- id: application-generated UUID (not autoincrement)
+## Scope
+
+IN:
+- User registration and login
+- Role-based access control
+- Audit log for state-changing actions
+
+OUT:
+- Social sign-in
+- Custom branding per tenant
+- Real-time collaboration
 ```
 
-## Self-check
+3. Long lists should be split into smaller groups of 2-5 related items:
 
-- When: run after writing or editing any planning document
-- Command: `node .agents/skills/planning-style/validate.js <file.md>`
-- Errors: fix all before finishing
-- Warnings: valid when the bullet sits under a header that provides full context
+```example
+## Constraints
+
+Performance:
+- Page load under 2 seconds on 3G.
+- API responses under 200ms at p95.
+
+Security:
+- All secrets stored in a vault, never in config files.
+- Dependencies scanned weekly for known vulnerabilities.
+
+Budget:
+- Infrastructure capped at $500/month.
+- Third-party API costs tracked per environment.
+- All spend reviewed monthly.
+```
