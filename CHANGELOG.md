@@ -2,6 +2,13 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 2.5.0 (2026-06-14)
+
+- Rewrote "Communication Style" as "Chat and Writing Style": now governs tone for all prose (chat and documents), leads with claim-and-mechanism, and bars copying jargon from sources.
+- Added `.gitignore` for the workflow scratch docs; `task-plan.md`, `task-uat.md`, and `slice-report.md` are now ignored instead of manually removed before committing.
+- Promoted `slice-report.md` to a required document with a template (Delivered / Emergent Decisions / Caveats); `Run the slice` now closes by writing it.
+- Reworded `Run the slice` behavior around document names and path-qualified the `task-plan.md` template heading.
+
 ## 2.4.0 (2026-06-11)
 
 - Added `Run the slice` protocol: autonomous end-to-end slice execution with preconditions, loop behavior, and stop conditions.
