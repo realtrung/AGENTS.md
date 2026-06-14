@@ -119,10 +119,9 @@ Preconditions — if any is missing, say so and fall back to `What next?`:
 
 Behavior:
 
-- Loop: plan the next task → full RGR cycle with commits → verify → update the changelog → repeat until the slice goal is met.
-- The per-task protocol is unchanged: `task-plan.md` before implementing, `task-uat.md` after, both removed before committing.
+- Loop: `task-plan.md` → RGR cycle → `task-uat.md` → verify → `changelog.md` → repeat until the slice goal is met.
 - The REFACTOR commit does not wait for UAT; verification is the full test suite plus the task's own checks.
-- Close by marking the slice done and reporting a slice-level summary that includes honest caveats and untested surfaces.
+- Close by marking the slice done and writing `slice-report.md`.
 
 Stop and ask when:
 
