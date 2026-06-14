@@ -209,7 +209,19 @@ Rule: Goal states intent only; decisions and implementation details belong in `t
 ## S1 Repository Foundation
 ```
 
-### Task Plan
+### `.building/<iteration>/slice-report.md`
+
+```md
+# S<N> <Slice Name> Report
+
+## Delivered
+
+## Emergent Decisions
+
+## Caveats
+```
+
+### `.building/<iteration>/task-plan.md`
 
 ```md
 # Title
