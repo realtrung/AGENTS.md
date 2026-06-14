@@ -107,7 +107,6 @@ Requirements:
 - Size the task around meaningful units of behavior, not individual functions.
 - Write the task plan in plain English; save it to `task-plan.md` for review.
 - After completing the task, create a short, skimmable `task-uat.md` UAT checklist.
-- Remove both `task-plan.md` and `task-uat.md` before committing.
 
 ## Slice Run
 
