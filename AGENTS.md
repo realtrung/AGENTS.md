@@ -129,7 +129,7 @@ Commit format: `<type>(<scope>): <message>`.
 
 - Single repo: use `<WorkID>` for implementation tasks; omit the scope for non-task.
 - Monorepo: always scoped to the workspace name, or `repo` for repo-wide changes.
-  Append `/<WorkID>` for implementation tasks.
+  Append `/<WorkID>` to tie commits to implementation tasks.
 
 ### Examples
 
