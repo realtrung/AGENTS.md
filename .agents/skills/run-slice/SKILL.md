@@ -1,5 +1,5 @@
 ---
-version: 1.0.2
+version: 1.1.0
 name: run-slice
 description: When the user says "Run this slice", implement the active slice from start to finish, no per-task approvals. Read before starting the loop, and re-read before proceeding with the next task to ensure workflow adherence.
 ---
@@ -7,6 +7,12 @@ description: When the user says "Run this slice", implement the active slice fro
 # Run Slice
 
 When asked `Run this slice`, implement the active slice from start to finish. Follow the repository's workflow, except that per-task approvals are skipped.
+
+## Precondition
+
+The slice must have an `s<N>-plan.md` document, recorded in the iteration plan.
+
+If the precondition is not met, do not start the Execution Loop.
 
 ## Execution Loop
 
