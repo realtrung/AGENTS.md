@@ -1,5 +1,5 @@
 ---
-version: 1.0.0
+version: 1.0.1
 name: run-slice
 description: When the user says "Run this slice", implement the active slice from start to finish, no per-task approvals. Read before starting the loop, and re-read before proceeding with the next task to ensure workflow adherence.
 ---
@@ -10,12 +10,12 @@ When asked `Run this slice`, implement the active slice from start to finish. Fo
 
 ## Execution Loop
 
-1. write task-plan.md
-2. RED commit
-3. GREEN commit
-4. REFACTOR commit
-5. write task-uat.md, verify
-6. update iteration changelog, commit
+1. write `task-plan.md`
+2. RED: modify test files → verify fail → commit
+3. GREEN: modify source files → verify pass → commit
+4. REFACTOR: modify source and/or test files → verify pass → commit
+5. write `task-uat.md` → verify implementation correct
+6. update iteration `changelog.md` → commit
 7. next task
 
 Loop until the slice exit criteria are met or a stop condition is hit.
