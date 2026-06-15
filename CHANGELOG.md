@@ -2,6 +2,30 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 3.0.0 (2026-06-15)
+
+- Condensed Core Operating Rules from 10 to 7: removed per-iteration/slice restriction
+  rules ("Handle active iteration only", "Never invent task breakdown", "Focus on next
+  task only", "Record outcomes"), added task-sizing rule, moved RGR adherence rule up.
+- Overhauled Execution Flow: removed "propose task" and "wait for user confirmation"
+  steps; added explicit `task-plan.md` write (step 4) and `task-report.md` verify
+  (step 6); condensed active-iteration/slice identification into two steps.
+- RGR cycle: REFACTOR phase now commits immediately with type `refactor`; removed the
+  UAT approval gate ("Do not commit yet / Wait for UAT result"); added explicit commit
+  types (`test`, `feat`, `refactor`) to all three phases.
+- Removed the "Task Plan" section (`What next?` behavior and `task-uat.md` checklist).
+- Commit Rule: moved granularity sentence here; added it before the format line.
+- `delivered.md` template example entry updated to generic placeholder text.
+
+## run-slice 1.2.0 (2026-06-15)
+
+- Replaced `task-uat.md` with `task-report.md` in the Execution Loop (step 5).
+- Added explicit commit types to loop RGR steps (`commit test`, `commit feat`,
+  `commit refactor`).
+- Removed "no per-task approvals" language from the description and body.
+- Reorganized loop/close rules into a new "Principles of Engagement" section.
+- Renamed "Slice Report" template section header to path-qualified form.
+
 ## 2.7.1 (2026-06-15)
 
 - Fixed remaining `changelog.md` references missed in 2.7.0: Execution Flow step 2 in `AGENTS.md`, `.building/` bullet in `README.md`, and step 6 in the `run-slice` skill.
