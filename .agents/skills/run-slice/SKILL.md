@@ -1,5 +1,5 @@
 ---
-version: 1.3.0
+version: 1.3.1
 name: run-slice
 description: When the user says "Run this slice", implement the active slice from start to
   finish, task by task. Read before starting the loop, and re-read before proceeding with
@@ -8,8 +8,8 @@ description: When the user says "Run this slice", implement the active slice fro
 
 # Run Slice
 
-When asked `Run this slice`, implement the active slice from start to finish,
-task by task, following the RGR cycle.
+When triggered, implement the active slice from start to finish, task by task,
+following the RGR cycle.
 
 ## Precondition
 
