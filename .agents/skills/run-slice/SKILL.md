@@ -15,7 +15,7 @@ When asked `Run this slice`, implement the active slice from start to finish. Fo
 3. GREEN: modify source files → verify pass → commit
 4. REFACTOR: modify source and/or test files → verify pass → commit
 5. write `task-uat.md` → verify implementation correct
-6. update iteration `changelog.md` → commit
+6. update iteration `delivered.md` → commit
 7. next task
 
 Loop until the slice exit criteria are met or a stop condition is hit.
