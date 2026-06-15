@@ -72,8 +72,7 @@ When executing work, always follow this sequence:
 4. write `task-plan.md` for the next implementation task
 5. implement the task, follow the RGR cycle
 6. write `task-report.md` → verify implementation correct
-7. update `delivered.md` and iteration/slice statuses
-   to reflect current progress.
+7. update `delivered.md` and slice status to reflect current progress
 
 ## Agentic TDD Protocol
 
