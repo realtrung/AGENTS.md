@@ -6,10 +6,10 @@ A disciplined workflow for AI coding agents — iteration-based planning, test-d
 
 Five constraints that keep agents focused:
 
-- **Iteration → Slice → Task hierarchy** — execute one task at a time.
-- **Task proposal loop** — propose the next task, wait for confirmation, implement, then verify with a UAT checklist.
-- **Slice run mode** — execute an entire slice end-to-end without per-task approvals when the slice has a settled design.
-- **Test-Driven Development** — follow the Red-Green-Refactor cycle with separate commits for each phase.
+- **Iteration → Slice → Task hierarchy** — work flows top-down; one task at a time.
+- **Autonomous execution loop** — write `task-plan.md`, implement, write `task-report.md`, update `delivered.md`; no per-task approval gates.
+- **Slice run mode** — the `run-slice` skill executes an entire slice end-to-end, task by task, following the RGR cycle.
+- **Test-Driven Development** — follow the Red-Green-Refactor cycle with typed commits (`test`, `feat`, `refactor`) for each phase.
 - **`.building/` docs** — product context, iteration plans, status tracking, and delivered outcomes.
 
 ## Quick start
