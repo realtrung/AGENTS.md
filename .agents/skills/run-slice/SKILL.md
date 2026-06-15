@@ -1,5 +1,5 @@
 ---
-version: 1.3.1
+version: 1.3.2
 name: run-slice
 description: When the user says "Run this slice", implement the active slice from start to
   finish, task by task. Read before starting the loop, and re-read before proceeding with
@@ -31,6 +31,8 @@ If the precondition is not met, do not start the Execution Loop.
 
 - Size each task around a meaningful unit of behavior, not individual functions.
 - Loop until the slice exit criteria are met or a stop condition is hit.
+- If emergent decisions exist, update the iteration and/or slice plans to
+  reflect the latest state.
 - Close the slice by flipping its state in `plan.md`. Commit, then write
   `slice-report.md`. Never flip iteration status as a side effect of slice-close.
 
