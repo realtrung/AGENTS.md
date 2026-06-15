@@ -1,12 +1,15 @@
 ---
-version: 1.1.0
+version: 1.2.0
 name: run-slice
-description: When the user says "Run this slice", implement the active slice from start to finish, no per-task approvals. Read before starting the loop, and re-read before proceeding with the next task to ensure workflow adherence.
+description: When the user says "Run this slice", implement the active slice from start to
+  finish, task by task. Read before starting the loop, and re-read before proceeding with
+  the next task to ensure workflow adherence.
 ---
 
 # Run Slice
 
-When asked `Run this slice`, implement the active slice from start to finish. Follow the repository's workflow, except that per-task approvals are skipped.
+When asked `Run this slice`, implement the active slice from start to finish,
+task by task, following the RGR cycle.
 
 ## Precondition
 
@@ -17,16 +20,19 @@ If the precondition is not met, do not start the Execution Loop.
 ## Execution Loop
 
 1. write `task-plan.md`
-2. RED: modify test files → verify fail → commit
-3. GREEN: modify source files → verify pass → commit
-4. REFACTOR: modify source and/or test files → verify pass → commit
-5. write `task-uat.md` → verify implementation correct
+2. RED: modify test files → verify fail → commit `test`
+3. GREEN: modify source files → verify pass → commit `feat`
+4. REFACTOR: modify source and/or test files → verify pass → commit `refactor`
+5. write `task-report.md` → verify implementation correct
 6. update iteration `delivered.md` → commit
 7. next task
 
-Loop until the slice exit criteria are met or a stop condition is hit.
+## Principles of Engagement
 
-Close by marking the slice `[x]` in `plan.md` and updating iteration status in `iterations.md`. Commit, then write `slice-report.md`.
+- Size each task around a meaningful unit of behavior, not individual functions.
+- Loop until the slice exit criteria are met or a stop condition is hit.
+- Close the slice by marking its state as `[x]` in `plan.md` and updating iteration status
+  in `iterations.md`. Commit, then write `slice-report.md`.
 
 ## Stop Conditions
 
@@ -34,7 +40,7 @@ Close by marking the slice `[x]` in `plan.md` and updating iteration status in `
 - The test suite cannot be brought back to green within the current task's scope.
 - Continuing would require a destructive or irreversible action.
 
-## Slice Report
+## `.building/<iteration>/slice-report.md`
 
 ```md
 # S<N> <Slice Name> Report
