@@ -1,5 +1,5 @@
 ---
-version: 2.5.0
+version: 2.6.0
 ---
 
 # Workflow
@@ -108,27 +108,6 @@ Requirements:
 - Write the task plan in plain English; save it to `task-plan.md` for review.
 - After completing the task, create a short, skimmable `task-uat.md` UAT checklist.
 
-## Slice Run
-
-When asked `Run the slice`, implement the active slice end to end, task by task, without waiting for per-task approvals.
-
-Preconditions — if any is missing, say so and fall back to `What next?`:
-
-- The slice goal is written in `plan.md`.
-- The slice has a settled, user-approved design (an `s<N>-design.md` or equivalent decisions recorded in the iteration docs).
-
-Behavior:
-
-- Loop: `task-plan.md` → RGR cycle → `task-uat.md` → verify → `changelog.md` → repeat until the slice goal is met.
-- The REFACTOR commit does not wait for UAT; verification is the full test suite plus the task's own checks.
-- Close by marking the slice done and writing `slice-report.md`.
-
-Stop and ask when:
-
-- A product or technical decision arises that the design does not settle.
-- The test suite cannot be brought back to green within the current task's scope.
-- Continuing would require a destructive or irreversible action.
-
 ## Status Values
 
 Allowed statuses for iterations and slices:
@@ -207,18 +186,6 @@ Rule: Goal states intent only; decisions and implementation details belong in `t
 - I1-S2-01 (2026-03-25): Unauthenticated users are redirected to sign-in before accessing the workspace.
 
 ## S1 Repository Foundation
-```
-
-### `.building/<iteration>/slice-report.md`
-
-```md
-# S<N> <Slice Name> Report
-
-## Delivered
-
-## Emergent Decisions
-
-## Caveats
 ```
 
 ### `.building/<iteration>/task-plan.md`

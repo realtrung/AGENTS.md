@@ -2,6 +2,10 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 2.6.0 (2026-06-15)
+
+- Extracted "Run the slice" into a standalone skill at `.agents/skills/run-slice/SKILL.md`; removed the inline section from `AGENTS.md`.
+
 ## 2.5.0 (2026-06-14)
 
 - Rewrote "Communication Style" as "Chat and Writing Style": now governs tone for all prose (chat and documents), leads with claim-and-mechanism, and bars copying jargon from sources.
