@@ -1,5 +1,5 @@
 ---
-version: 1.0.1
+version: 1.0.2
 name: run-slice
 description: When the user says "Run this slice", implement the active slice from start to finish, no per-task approvals. Read before starting the loop, and re-read before proceeding with the next task to ensure workflow adherence.
 ---

@@ -10,7 +10,7 @@ Five constraints that keep agents focused:
 - **Task proposal loop** — propose the next task, wait for confirmation, implement, then verify with a UAT checklist.
 - **Slice run mode** — execute an entire slice end-to-end without per-task approvals when the slice has a settled design.
 - **Test-Driven Development** — follow the Red-Green-Refactor cycle with separate commits for each phase.
-- **`.building/` docs** — product context, iteration plans, status tracking, and changelogs.
+- **`.building/` docs** — product context, iteration plans, status tracking, and delivered outcomes.
 
 ## Quick start
 

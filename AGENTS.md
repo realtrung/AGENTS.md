@@ -1,5 +1,5 @@
 ---
-version: 2.7.0
+version: 2.7.1
 ---
 
 # Workflow
@@ -64,7 +64,7 @@ When working on a specific app/package, use that workspace's `.building/` docs.
 When executing work, always follow this sequence:
 
 1. Identify the active iteration.
-2. Read `plan.md` and recent `changelog.md` entries for that iteration.
+2. Read `plan.md` and recent `delivered.md` outcomes for that iteration.
 3. Identify the active slice.
 4. Assess progress against the slice exit criteria.
 5. Propose the single next implementation task.

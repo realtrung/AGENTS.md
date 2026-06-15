@@ -2,6 +2,10 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 2.7.1 (2026-06-15)
+
+- Fixed remaining `changelog.md` references missed in 2.7.0: Execution Flow step 2 in `AGENTS.md`, `.building/` bullet in `README.md`, and step 6 in the `run-slice` skill.
+
 ## 2.7.0 (2026-06-15)
 
 - Renamed `changelog.md` to `delivered.md` in the `.building/` structure; updated all references in `AGENTS.md` and the `run-slice` skill.
