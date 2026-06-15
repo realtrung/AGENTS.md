@@ -2,6 +2,13 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 3.0.1 (2026-06-15)
+
+- Chat and Writing Style: moved "cut fluff, cheerful filler, praise" bullet from Always to
+  In chat; trimmed "keep this style" note (removed jargon-source example).
+- Execution Flow step 7: "iteration/slice statuses" → "slice status".
+- Commit Rule: clarified monorepo WorkID note — "to tie commits to implementation tasks".
+
 ## 3.0.0 (2026-06-15)
 
 - Condensed Core Operating Rules from 10 to 7: removed per-iteration/slice restriction
