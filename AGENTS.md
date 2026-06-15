@@ -1,5 +1,5 @@
 ---
-version: 2.6.0
+version: 2.7.0
 ---
 
 # Workflow
@@ -48,7 +48,7 @@ The active workspace must have `.building/` and the required iteration documents
   iterations.md       # Iteration status tracker
   i1-foundation/
     plan.md           # Iteration and slice goals — no predefined tasks
-    changelog.md      # Execution record: one entry per completed unit, newest first, written as outcomes — not mechanical changes
+    delivered.md      # Completed task outcomes, newest first
   i2-core-feature/
   i3-extension/
 ```
@@ -71,7 +71,7 @@ When executing work, always follow this sequence:
 6. Wait for user confirmation before implementing.
 7. Implement the task.
 8. Verify the result.
-9. Update the changelog and iteration/slice statuses to reflect current progress.
+9. Update `delivered.md` and iteration/slice statuses to reflect current progress.
 
 ## Agentic TDD Protocol
 
@@ -176,10 +176,10 @@ Commit format: `<type>(<scope>): <message>`.
 
 Rule: Goal states intent only; decisions and implementation details belong in `task-plan.md`.
 
-### `.building/<iteration>/changelog.md`
+### `.building/<iteration>/delivered.md`
 
 ```md
-# I1 Foundation Changelog
+# I1 Foundation Delivered
 
 ## S2 Auth and Workspace Shell
 

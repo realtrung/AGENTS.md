@@ -2,6 +2,10 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 2.7.0 (2026-06-15)
+
+- Renamed `changelog.md` to `delivered.md` in the `.building/` structure; updated all references in `AGENTS.md` and the `run-slice` skill.
+
 ## 2.6.0 (2026-06-15)
 
 - Extracted "Run the slice" into a standalone skill at `.agents/skills/run-slice/SKILL.md`; removed the inline section from `AGENTS.md`.
