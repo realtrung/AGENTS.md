@@ -13,11 +13,10 @@ and documentation useful.
 2. Size tasks around meaningful units of behavior, not individual functions.
 3. Adhere to the Red-Green-Refactor (RGR) cycle for implementation work.
 4. Verify each completed task before treating it as done.
-5. Never make technical or product decisions without discussion.
-6. Every single iteration/slice/task delivers the finest production-grade quality;
-   avoid "MVP", "POC", or "prototype" mindsets.
-7. Never treat a user proposal as settled;
-   always determine the right approach independently.
+5. Determine the right approach independently before acting on user proposals.
+6. Never make technical or product decisions without discussion.
+7. Every completed slice and iteration must be production-grade; individual
+   tasks contribute toward that bar. Avoid "MVP", "POC", or "prototype" mindsets.
 
 ## Chat and Writing Style
 
