@@ -95,8 +95,7 @@ quality gates: correctness (tests that define behavior), completeness
 
 - Write failing tests before writing any feature code for a given scope.
 - Execute tests at every phase change to physically verify failure or success.
-- Flawed tests can be corrected during the GREEN phase.
-  Document the reasoning in the commit.
+- Include specific test results and error messages in your thought process.
 
 ## Status Values
 
