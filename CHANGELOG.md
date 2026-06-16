@@ -2,6 +2,22 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 3.0.3 (2026-06-16)
+
+- Core Operating Rules: reordered rules 5–7 — independent-approach rule (5) now precedes
+  no-unilateral-decisions rule (6); production-grade quality rule (7) scoped from "every
+  single task" to "every completed slice and iteration".
+- Agentic TDD Protocol intro: replaced vague "clarify intent / success metrics" framing
+  with explicit quality-gate labels per phase — correctness (RED), completeness (GREEN),
+  clarity (REFACTOR).
+- Principles of Engagement: replaced "flawed tests can be corrected in GREEN" bullet with
+  "include specific test results and error messages in your thought process".
+
+## 3.0.2 (2026-06-15)
+
+- Execution Flow step 7: "update `delivered.md` and slice status to reflect current
+  progress" → "update iteration `delivered.md` → commit".
+
 ## 3.0.1 (2026-06-15)
 
 - Chat and Writing Style: moved "cut fluff, cheerful filler, praise" bullet from Always to
