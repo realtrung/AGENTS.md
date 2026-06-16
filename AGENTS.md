@@ -75,8 +75,9 @@ When executing work, always follow this sequence:
 
 ## Agentic TDD Protocol
 
-For implementation work, you must follow the RGR cycle to clarify your intent and deliver
-finest code quality — these are your success metrics.
+You must follow the RGR cycle for implementation work. The three phases are your
+quality gates: correctness (tests that define behavior), completeness
+(minimal code that passes), and clarity (cleanup without behavior change).
 
 ### The RGR Cycle
 
