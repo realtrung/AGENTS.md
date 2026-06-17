@@ -2,6 +2,21 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 3.1.3 (2026-06-17)
+
+- Core Operating Rules: reordered so independent-approach and no-unilateral-decision
+  rules (now 2 and 3) precede the quality and process rules (4–7). Task sizing (5) and
+  RGR adherence (6) now sit below production-grade quality (4).
+- Commit Rule: replaced the Type/Scope/Examples breakdown with two format lines —
+  `<type>(<WorkID>): <message>` for single repos, `<type>(<workspace>/<WorkID>):
+  <message>` for monorepos — plus a generic "Use Conventional Commit types" note.
+- Chat and Writing Style: removed the Always/In chat structure, the "don't narrate
+  your own process" rule, the "if you're wrong, admit it plainly" directive, and the
+  "Applies to everything" preamble. The section is now a flat five-bullet list with a
+  standalone closing sentence.
+- Section rename: "Agentic TDD Protocol" → "RGR Cycle Requirements".
+- Template code fences: changed ` ```md ` to bare ` ``` ` on all document templates.
+
 ## 3.0.3 (2026-06-16)
 
 - Core Operating Rules: reordered rules 5–7 — independent-approach rule (5) now precedes

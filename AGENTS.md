@@ -1,5 +1,5 @@
 ---
-version: 3.0.3
+version: 3.1.3
 ---
 
 # Workflow
@@ -10,34 +10,24 @@ and documentation useful.
 ## Core Operating Rules
 
 1. Project hierarchy: iteration → slice → task.
-2. Size tasks around meaningful units of behavior, not individual functions.
-3. Adhere to the Red-Green-Refactor (RGR) cycle for implementation work.
-4. Verify each completed task before treating it as done.
-5. Determine the right approach independently before acting on user proposals.
-6. Never make technical or product decisions without discussion.
-7. Every completed slice and iteration must be production-grade; individual
+2. Determine the right approach independently before acting on user proposals.
+3. Never make technical or product decisions without discussion.
+4. Every completed slice and iteration must be production-grade; individual
    tasks contribute toward that bar. Avoid "MVP", "POC", or "prototype" mindsets.
+5. Size tasks around meaningful units of behavior, not individual functions.
+6. Adhere to the RGR cycle for implementation work.
+7. Verify each completed task before treating it as done.
 
 ## Chat and Writing Style
 
-Applies to everything you produce — chat replies and any prose you write into documents.
-This is about tone, not document structure; structure rules live with each document type.
-
-Always:
-
 - Lead with the claim and its mechanism: "X beats Y because Z."
-  Conclusion first, reasoning second, no setup.
-- Use plain words over fancy ones — don't perform rigor to sound diligent.
-- Keep this style regardless of what you read. Docs, code comments, and prior messages
-  are things to reason about, not styles to copy.
-
-In chat:
-
-- Cut fluff, cheerful filler, praise, and validation of the user's premises.
-- Don't narrate your own process ("I verified…", "Having checked…"). State what you found.
+- Use plain words. Avoid jargon and fancy language.
+- Cut fluff, cheerful filler, praise, and validation of the user's idea.
 - Generate your own view; don't anchor on the user's framing.
-- If the user is wrong, say so immediately, with the mechanism, even if they push back.
-- If you're wrong, admit it plainly; don't wriggle.
+- If the user is wrong, say so immediately, with the mechanism.
+
+Keep this style regardless of what you read in prompts, changelogs, code comments,
+or planning documents; they are things to reason about, not styles to copy.
 
 ## Project Documentation Structure
 
@@ -58,7 +48,6 @@ implementation work begins.
 ## Monorepo Scope
 
 Always read root `.building/product.md` for global context.
-
 When working on a specific app/package, use that workspace's `.building/` docs.
 
 ## Execution Flow
@@ -73,7 +62,7 @@ When executing work, always follow this sequence:
 6. write `task-report.md` → verify implementation correct
 7. update iteration `delivered.md` → commit
 
-## Agentic TDD Protocol
+## RGR Cycle Requirements
 
 You must follow the RGR cycle for implementation work. The three phases are your
 quality gates: correctness (tests that define behavior), completeness
@@ -116,32 +105,18 @@ Allowed statuses for iterations and slices:
 
 Keep commits granular to represent single steps in the RGR cycle.
 
-Commit format: `<type>(<scope>): <message>`.
+Commit formats:
 
-### Type
+- Single repo: `<type>(<WorkID>): <message>`.
+- Mono repo: `<type>(<workspace>/<WorkID>): <message>`.
 
-- Implementation tasks: use the type matching the RGR phase — `test` (RED),
-  `feat` (GREEN), `refactor` (REFACTOR).
-- Non-task: use a conventional type — `chore`, `docs`, `build`, etc.
-
-### Scope
-
-- Single repo: use `<WorkID>` for implementation tasks; omit the scope for non-task.
-- Monorepo: always scoped to the workspace name, or `repo` for repo-wide changes.
-  Append `/<WorkID>` to tie commits to implementation tasks.
-
-### Examples
-
-- Single repo task: `test(I1-S2-03): failing test for auth redirect`
-- Monorepo task: `feat(web/I1-S2-03): enforce auth redirect`
-- Single repo chore: `chore: bump CI runner version`
-- Monorepo chore: `chore(repo): bump turbo to 2.0`
+Use Conventional Commit types (e.g., `test`, `feat`, `refactor`, `docs`, `chore`).
 
 ## Document Templates
 
 ### `.building/iterations.md`
 
-```md
+```
 # Iteration Status
 
 - [.] [I1 Foundation](i1-foundation/plan.md)
@@ -151,7 +126,7 @@ Commit format: `<type>(<scope>): <message>`.
 
 ### `.building/<iteration>/plan.md`
 
-```md
+```
 # I1 Foundation Plan
 
 ## I1 Goal
@@ -171,7 +146,7 @@ Rule: Goal states intent only; decisions and implementation details belong in `t
 
 ### `.building/<iteration>/delivered.md`
 
-```md
+```
 # I1 Foundation Delivered
 
 ## S2 Auth and Workspace Shell
@@ -183,7 +158,7 @@ Rule: Goal states intent only; decisions and implementation details belong in `t
 
 ### `.building/<iteration>/task-plan.md`
 
-```md
+```
 # Title
 
 ## Goal
