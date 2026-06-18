@@ -1,5 +1,5 @@
 ---
-version: 3.1.3
+version: 3.2.3
 ---
 
 # Workflow
@@ -12,10 +12,10 @@ and documentation useful.
 1. Project hierarchy: iteration → slice → task.
 2. Determine the right approach independently before acting on user proposals.
 3. Never make technical or product decisions without discussion.
-4. Every completed slice and iteration must be production-grade; individual
-   tasks contribute toward that bar. Avoid "MVP", "POC", or "prototype" mindsets.
+4. Every completed slice and iteration must be production-grade. Tasks should
+   contribute toward that standard. Avoid "MVP" or "PoC" mindsets.
 5. Size tasks around meaningful units of behavior, not individual functions.
-6. Adhere to the RGR cycle for implementation work.
+6. Follow the Red-Green-Refactor (RGR) cycle for code changes.
 7. Verify each completed task before treating it as done.
 
 ## Chat and Writing Style
@@ -31,40 +31,35 @@ or planning documents; they are things to reason about, not styles to copy.
 
 ## Project Documentation Structure
 
-The active workspace must have `.building/` and the required iteration documents before
-implementation work begins.
+This structure applies to both single repo and monorepo workspaces:
 
-```text
-.building/
-  product.md          # Product context
-  iterations.md       # Iteration status tracker
-  i1-foundation/
-    plan.md           # Iteration and slice goals — no predefined tasks
-    delivered.md      # Completed task outcomes, newest first
-  i2-core-feature/
-  i3-extension/
 ```
-
-## Monorepo Scope
-
-Always read root `.building/product.md` for global context.
-When working on a specific app/package, use that workspace's `.building/` docs.
+workspace/
+  .building/
+    product.md          # Product context
+    iterations.md       # Iteration status tracker
+    i1-foundation/
+      plan.md           # Iteration and slice goals — no predefined tasks
+      delivered.md      # Completed task outcomes, newest first
+    i2-core-feature/
+  src/
+```
 
 ## Execution Flow
 
-When executing work, always follow this sequence:
+Follow this sequence:
 
 1. read project documents
 2. identify the active iteration and active slice
 3. assess progress against the slice exit criteria
-4. write `task-plan.md` for the next implementation task
-5. implement the task, follow the RGR cycle
+4. write `task-plan.md` for the next task
+5. implement the task: follow the RGR cycle, commit `RED` first
 6. write `task-report.md` → verify implementation correct
 7. update iteration `delivered.md` → commit
 
 ## RGR Cycle Requirements
 
-You must follow the RGR cycle for implementation work. The three phases are your
+You must follow the RGR cycle for code changes. The three phases are your
 quality gates: correctness (tests that define behavior), completeness
 (minimal code that passes), and clarity (cleanup without behavior change).
 
@@ -74,7 +69,7 @@ quality gates: correctness (tests that define behavior), completeness
    - Goal: Write one or more failing tests that define the desired behavior.
    - Action: Modify test files. Verify fail. Commit with type `test`.
 2. GREEN
-   - Goal: Write the minimum implementation code to make the tests pass.
+   - Goal: Write the minimum code to make the tests pass.
    - Action: Modify source files. Verify pass. Commit with type `feat`.
 3. REFACTOR
    - Goal: Improve code structure, readability, or performance without changing behavior.
@@ -101,16 +96,10 @@ Allowed statuses for iterations and slices:
 - Task: `01`, `02`, `03`
 - Work ID: `I1-S1-01`, `I1-S1-02`
 
-## Commit Rule
-
-Keep commits granular to represent single steps in the RGR cycle.
-
-Commit formats:
+## Commit Formats
 
 - Single repo: `<type>(<WorkID>): <message>`.
 - Mono repo: `<type>(<workspace>/<WorkID>): <message>`.
-
-Use Conventional Commit types (e.g., `test`, `feat`, `refactor`, `docs`, `chore`).
 
 ## Document Templates
 
@@ -121,7 +110,6 @@ Use Conventional Commit types (e.g., `test`, `feat`, `refactor`, `docs`, `chore`
 
 - [.] [I1 Foundation](i1-foundation/plan.md)
 - [ ] [I2 Core Features](i2-core-features/plan.md)
-- [ ] [I3 Advanced Tools](i3-advanced-tools/plan.md)
 ```
 
 ### `.building/<iteration>/plan.md`
@@ -151,7 +139,7 @@ Rule: Goal states intent only; decisions and implementation details belong in `t
 
 ## S2 Auth and Workspace Shell
 
-- I1-S2-01 (2026-03-25): Task outcome, not mechanical changes.
+- I1-S2-01 (yyyy-mm-dd): Write concise task outcome, not mechanical changes.
 
 ## S1 Repository Foundation
 ```

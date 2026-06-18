@@ -2,6 +2,27 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 3.2.3 (2026-06-18)
+
+- Scope language: replaced "implementation work" with "code changes" in the RGR intro
+  and rule 6 to reflect that the RGR cycle governs all code modifications, not
+  just feature implementation. Rule 6 now expands the RGR acronym inline.
+- Project Documentation Structure: replaced the imperative "active workspace must
+  have" tree with a declarative `workspace/` tree applicable to both single-repo
+  and monorepo setups. Removed the "Monorepo Scope" section — the single tree now
+  covers all cases.
+- Execution Flow step 5: added "commit `RED` first" to reinforce that the RED
+  phase ends with a commit before GREEN begins.
+- Commit formats: renamed "Commit Rule" to "Commit Formats" and removed the
+  granularity sentence and Conventional Commit types note — the format lines
+  suffice.
+- RGR GREEN goal: shortened from "Write the minimum implementation code to make
+  the tests pass" to "Write the minimum code to make the tests pass."
+- Template cleanup: removed I3 from the iterations.md template example; replaced
+  the delivered.md placeholder with "Write concise task outcome."
+- Core Operating Rule 4 wording trimmed: "individual tasks contribute toward
+  that bar" → "Tasks should contribute toward that standard."
+
 ## 3.1.3 (2026-06-17)
 
 - Core Operating Rules: reordered so independent-approach and no-unilateral-decision
