@@ -2,6 +2,15 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 3.3.0 (2026-06-20)
+
+- Execution Flow step 6: replaced `task-report.md` verification with sub-agent review.
+- Added "Sub-Agent Review" section: launch a sub-agent code review after REFACTOR.
+
+### run-slice 1.4.0 (2026-06-20)
+
+- Execution Loop step 5: replaced `task-report.md` verification with sub-agent review.
+
 ## 3.2.3 (2026-06-18)
 
 - Scope language: replaced "implementation work" with "code changes" in the RGR intro

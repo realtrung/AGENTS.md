@@ -1,5 +1,5 @@
 ---
-version: 3.2.3
+version: 3.3.0
 ---
 
 # Workflow
@@ -53,9 +53,9 @@ Follow this sequence:
 2. identify the active iteration and active slice
 3. assess progress against the slice exit criteria
 4. write `task-plan.md` for the next task
-5. implement the task: follow the RGR cycle, commit `RED` first
-6. write `task-report.md` → verify implementation correct
-7. update iteration `delivered.md` → commit
+5. implement the task: follow the RGR cycle, commit RED first
+6. launch sub-agent review if the task spans multiple components
+7. update and commit iteration `delivered.md`
 
 ## RGR Cycle Requirements
 
@@ -80,6 +80,14 @@ quality gates: correctness (tests that define behavior), completeness
 - Write failing tests before writing any feature code for a given scope.
 - Execute tests at every phase change to physically verify failure or success.
 - Include specific test results and error messages in your thought process.
+
+## Sub-Agent Review
+
+After REFACTOR, launch a sub-agent code review when the task spans multiple
+cooperating components (e.g., parser, schema, placement, prompt contract).
+Skip for renames, doc-only edits, and mechanical refactors.
+
+Act on every finding before updating `delivered.md`.
 
 ## Status Values
 
