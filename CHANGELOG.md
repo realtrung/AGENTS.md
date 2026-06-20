@@ -2,10 +2,19 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 3.3.1 (2026-06-20)
+
+- Sub-Agent Review: simplified trigger from "spans multiple cooperating components (e.g., parser, schema, placement, prompt contract), skip for renames, doc-only edits, and mechanical refactors" to "changes system behavior". Same rule, less prescriptive.
+- Execution Flow step 6: matched the simplified trigger wording.
+
 ## 3.3.0 (2026-06-20)
 
 - Execution Flow step 6: replaced `task-report.md` verification with sub-agent review.
 - Added "Sub-Agent Review" section: launch a sub-agent code review after REFACTOR.
+
+### run-slice 1.4.1 (2026-06-20)
+
+- Execution Loop step 5: simplified sub-agent review trigger from "spans multiple components" to "changes system behavior", matching AGENTS.md 3.3.1.
 
 ### run-slice 1.4.0 (2026-06-20)
 

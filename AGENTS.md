@@ -1,5 +1,5 @@
 ---
-version: 3.3.0
+version: 3.3.1
 ---
 
 # Workflow
@@ -54,7 +54,7 @@ Follow this sequence:
 3. assess progress against the slice exit criteria
 4. write `task-plan.md` for the next task
 5. implement the task: follow the RGR cycle, commit RED first
-6. launch sub-agent review if the task spans multiple components
+6. launch sub-agent review if the task changes system behavior
 7. update and commit iteration `delivered.md`
 
 ## RGR Cycle Requirements
@@ -83,11 +83,8 @@ quality gates: correctness (tests that define behavior), completeness
 
 ## Sub-Agent Review
 
-After REFACTOR, launch a sub-agent code review when the task spans multiple
-cooperating components (e.g., parser, schema, placement, prompt contract).
-Skip for renames, doc-only edits, and mechanical refactors.
-
-Act on every finding before updating `delivered.md`.
+After REFACTOR, launch a sub-agent code review when the task changes system
+behavior. Act on every finding before updating `delivered.md`.
 
 ## Status Values
 
