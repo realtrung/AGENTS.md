@@ -2,6 +2,22 @@
 
 Versions follow [SemVer](https://semver.org/): patch for wording fixes, minor for new rules, major for breaking changes to the workflow. Entries are ordered newest first.
 
+## 3.4.0 (2026-06-20)
+
+- Conventions section: merged "Status Values", "ID Formats", and "Commit Formats" into a single "## Conventions" section (commit formats first, then ID formats, then status values).
+- Document Templates removed from AGENTS.md: moved to the new `project-documentation` skill.
+- RGR section: renamed "RGR Cycle Requirements" header and condensed intro into "### The RGR Cycle" with a shorter lead-in.
+- "Principles of Engagement" demoted from subheading to inline label "Principles of engagement:".
+- `plan.md` comment trimmed: removed "— no predefined tasks".
+- Work ID example corrected: `I1-S1-02` → `I1-S2-02`.
+- Replaced `planning-style` skill (v1.1.0) with `project-documentation` skill (v1.0.0): absorbs planning style formatting rules and the moved document templates.
+
+### run-slice 1.5.0 (2026-06-20)
+
+- Description moved from body into frontmatter; `# Run Slice` header and its opening paragraph removed.
+- Description text simplified: removed "Read before starting the loop, and re-read before proceeding with the next task to ensure workflow adherence."
+- Execution Loop step 5: "if" → "when" (matching AGENTS.md 3.3.1/3.3.2 trigger wording).
+
 ## 3.3.1 (2026-06-20)
 
 - Sub-Agent Review: simplified trigger from "spans multiple cooperating components (e.g., parser, schema, placement, prompt contract), skip for renames, doc-only edits, and mechanical refactors" to "changes system behavior". Same rule, less prescriptive.

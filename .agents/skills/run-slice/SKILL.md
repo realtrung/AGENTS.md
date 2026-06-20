@@ -1,15 +1,9 @@
 ---
-version: 1.4.1
+version: 1.5.0
 name: run-slice
-description: When the user says "Run this slice", implement the active slice from start to
-  finish, task by task. Read before starting the loop, and re-read before proceeding with
-  the next task to ensure workflow adherence.
+description: When triggered, implement the active slice from start to finish,
+  task by task, following the RGR cycle.
 ---
-
-# Run Slice
-
-When triggered, implement the active slice from start to finish, task by task,
-following the RGR cycle.
 
 ## Precondition
 
@@ -23,7 +17,7 @@ If the precondition is not met, do not start the Execution Loop.
 2. RED: modify test files → verify fail → commit `test`
 3. GREEN: modify source files → verify pass → commit `feat`
 4. REFACTOR: modify source and/or test files → verify pass → commit `refactor`
-5. launch sub-agent review if the task changes system behavior
+5. launch sub-agent review when the task changes system behavior
 6. update and commit iteration `delivered.md`
 7. next task
 

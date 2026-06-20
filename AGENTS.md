@@ -1,5 +1,5 @@
 ---
-version: 3.3.1
+version: 3.4.0
 ---
 
 # Workflow
@@ -39,7 +39,7 @@ workspace/
     product.md          # Product context
     iterations.md       # Iteration status tracker
     i1-foundation/
-      plan.md           # Iteration and slice goals — no predefined tasks
+      plan.md           # Iteration and slice goals
       delivered.md      # Completed task outcomes, newest first
     i2-core-feature/
   src/
@@ -54,16 +54,13 @@ Follow this sequence:
 3. assess progress against the slice exit criteria
 4. write `task-plan.md` for the next task
 5. implement the task: follow the RGR cycle, commit RED first
-6. launch sub-agent review if the task changes system behavior
+6. launch sub-agent review when the task changes system behavior
 7. update and commit iteration `delivered.md`
 
-## RGR Cycle Requirements
-
-You must follow the RGR cycle for code changes. The three phases are your
-quality gates: correctness (tests that define behavior), completeness
-(minimal code that passes), and clarity (cleanup without behavior change).
-
 ### The RGR Cycle
+
+You must follow the RGR cycle for code changes — the three phases are your
+quality gates:
 
 1. RED
    - Goal: Write one or more failing tests that define the desired behavior.
@@ -75,7 +72,7 @@ quality gates: correctness (tests that define behavior), completeness
    - Goal: Improve code structure, readability, or performance without changing behavior.
    - Action: Modify source and/or test files. Verify pass. Commit with type `refactor`.
 
-### Principles of Engagement
+Principles of engagement:
 
 - Write failing tests before writing any feature code for a given scope.
 - Execute tests at every phase change to physically verify failure or success.
@@ -86,81 +83,22 @@ quality gates: correctness (tests that define behavior), completeness
 After REFACTOR, launch a sub-agent code review when the task changes system
 behavior. Act on every finding before updating `delivered.md`.
 
-## Status Values
+## Conventions
 
-Allowed statuses for iterations and slices:
-
-- `[ ]` todo
-- `[.]` in progress
-- `[x]` done
-
-## ID Formats
-
-- Iteration: `I1`, `I2`, `I3`
-- Slice: `S1`, `S2`, `S3`
-- Task: `01`, `02`, `03`
-- Work ID: `I1-S1-01`, `I1-S1-02`
-
-## Commit Formats
+Commit formats:
 
 - Single repo: `<type>(<WorkID>): <message>`.
 - Mono repo: `<type>(<workspace>/<WorkID>): <message>`.
 
-## Document Templates
+ID formats:
 
-### `.building/iterations.md`
+- Iteration: `I1`, `I2`, `I3`
+- Slice: `S1`, `S2`, `S3`
+- Task: `01`, `02`, `03`
+- Work ID: `I1-S1-01`, `I1-S2-02`
 
-```
-# Iteration Status
+Status values:
 
-- [.] [I1 Foundation](i1-foundation/plan.md)
-- [ ] [I2 Core Features](i2-core-features/plan.md)
-```
-
-### `.building/<iteration>/plan.md`
-
-```
-# I1 Foundation Plan
-
-## I1 Goal
-
-## Slice Status
-
-- [x] [S1 Repository Foundation](#s1-goal)
-- [.] [S2 Auth and Workspace Shell](#s2-goal)
-- [ ] [S3 Core CRUD](#s3-goal)
-
-## S1 Goal
-
-## S2 Goal
-```
-
-Rule: Goal states intent only; decisions and implementation details belong in `task-plan.md`.
-
-### `.building/<iteration>/delivered.md`
-
-```
-# I1 Foundation Delivered
-
-## S2 Auth and Workspace Shell
-
-- I1-S2-01 (yyyy-mm-dd): Write concise task outcome, not mechanical changes.
-
-## S1 Repository Foundation
-```
-
-### `.building/<iteration>/task-plan.md`
-
-```
-# Title
-
-## Goal
-
-## Scope
-
-## Done when
-
-## Decisions
-
-## Approach
-```
+- `[ ]` todo
+- `[.]` in progress
+- `[x]` done
